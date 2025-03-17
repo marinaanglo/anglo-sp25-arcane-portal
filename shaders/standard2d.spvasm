@@ -1,0 +1,70 @@
+; SPIR-V
+; Version: 1.3
+; Generator: Google Tint Compiler; 0
+; Bound: 37
+; Schema: 0
+               OpCapability Shader
+               OpMemoryModel Logical GLSL450
+               OpEntryPoint Vertex %tint_symbol "tint_symbol" %tint_symbol_1_1 %value %vertex_point_size
+               OpEntryPoint Fragment %tint_symbol_2 "tint_symbol_2" %value_1
+               OpExecutionMode %tint_symbol_2 OriginUpperLeft
+               OpName %tint_symbol_1_1 "tint_symbol_1_1"
+               OpName %value "value"
+               OpName %vertex_point_size "vertex_point_size"
+               OpName %value_1 "value_1"
+               OpName %tint_symbol_inner "tint_symbol_inner"
+               OpName %tint_symbol_1 "tint_symbol_1"
+               OpName %tint_symbol "tint_symbol"
+               OpName %tint_symbol_2_inner "tint_symbol_2_inner"
+               OpName %tint_symbol_2 "tint_symbol_2"
+               OpDecorate %tint_symbol_1_1 Location 0
+               OpDecorate %value BuiltIn Position
+               OpDecorate %vertex_point_size BuiltIn PointSize
+               OpDecorate %value_1 Location 0
+      %float = OpTypeFloat 32
+    %v2float = OpTypeVector %float 2
+%_ptr_Input_v2float = OpTypePointer Input %v2float
+%tint_symbol_1_1 = OpVariable %_ptr_Input_v2float Input
+    %v4float = OpTypeVector %float 4
+%_ptr_Output_v4float = OpTypePointer Output %v4float
+          %8 = OpConstantNull %v4float
+      %value = OpVariable %_ptr_Output_v4float Output %8
+%_ptr_Output_float = OpTypePointer Output %float
+         %11 = OpConstantNull %float
+%vertex_point_size = OpVariable %_ptr_Output_float Output %11
+    %value_1 = OpVariable %_ptr_Output_v4float Output %8
+         %13 = OpTypeFunction %v4float %v2float
+    %float_1 = OpConstant %float 1
+       %void = OpTypeVoid
+         %21 = OpTypeFunction %void
+         %27 = OpTypeFunction %v4float
+%float_0_933333337 = OpConstant %float 0.933333337
+%float_0_4627451 = OpConstant %float 0.4627451
+%float_0_137254909 = OpConstant %float 0.137254909
+         %33 = OpConstantComposite %v4float %float_0_933333337 %float_0_4627451 %float_0_137254909 %float_1
+%tint_symbol_inner = OpFunction %v4float None %13
+%tint_symbol_1 = OpFunctionParameter %v2float
+         %16 = OpLabel
+         %17 = OpCompositeExtract %float %tint_symbol_1 0
+         %18 = OpCompositeExtract %float %tint_symbol_1 1
+         %20 = OpCompositeConstruct %v4float %17 %18 %11 %float_1
+               OpReturnValue %20
+               OpFunctionEnd
+%tint_symbol = OpFunction %void None %21
+         %24 = OpLabel
+         %26 = OpLoad %v2float %tint_symbol_1_1
+         %25 = OpFunctionCall %v4float %tint_symbol_inner %26
+               OpStore %value %25
+               OpStore %vertex_point_size %float_1
+               OpReturn
+               OpFunctionEnd
+%tint_symbol_2_inner = OpFunction %v4float None %27
+         %29 = OpLabel
+               OpReturnValue %33
+               OpFunctionEnd
+%tint_symbol_2 = OpFunction %void None %21
+         %35 = OpLabel
+         %36 = OpFunctionCall %v4float %tint_symbol_2_inner
+               OpStore %value_1 %36
+               OpReturn
+               OpFunctionEnd
