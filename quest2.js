@@ -26,12 +26,12 @@
 // Chrome & Edge 113+ : Enable Vulkan, Default ANGLE Vulkan, Vulkan from ANGLE, Unsafe WebGPU Support, and WebGPU Developer Features (if exsits)
 // Firefox Nightly: sudo snap install firefox --channel=latext/edge or download from https://www.mozilla.org/en-US/firefox/channel/desktop/
 
-import FilteredRenderer from '/lib/Viz/2DFilteredRenderer.js'
-import Standard2DFullScreenObject from '/lib/DSViz/Standard2DFullScreenObject.js'
-import Standard2DPGAPosedVertexColorObject from '/lib/DSViz/Standard2DPGAPosedVertexColorObject.js'
-import LineStrip2DVertexObject from '/lib/DSViz/LineStrip2DVertexObject.js'
-import DemoTreeObject from '/lib/DSViz/DemoTreeObject.js'
-import PGA2D from '/lib/Math/PGA2D.js'
+import FilteredRenderer from './lib/Viz/2DFilteredRenderer.js'
+import Standard2DFullScreenObject from './lib/DSViz/Standard2DFullScreenObject.js'
+import Standard2DPGAPosedVertexColorObject from './lib/DSViz/Standard2DPGAPosedVertexColorObject.js'
+import LineStrip2DVertexObject from './lib/DSViz/LineStrip2DVertexObject.js'
+import DemoTreeObject from './lib/DSViz/DemoTreeObject.js'
+import PGA2D from './lib/Math/PGA2D.js'
 
 async function init() {
   const canvas = document.createElement('canvas');
