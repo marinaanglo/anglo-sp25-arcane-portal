@@ -66,8 +66,9 @@ async function init() {
           if (polygon._index >= polygonTypes.length) {
             polygon._index = 0;
           }
-          const baseURL = new URL('.', import.meta.url).pathname;
-          await polygon.changePolygon(baseURL + 'assets/' + polygonTypes[polygon._index]);
+          const basePath = window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+          await polygon.changePolygon(basePath + 'assets/' + polygonTypes[polygon._index]);
+
           needToWait = false;
         }
         break;
