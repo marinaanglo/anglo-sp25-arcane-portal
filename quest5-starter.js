@@ -66,7 +66,8 @@ async function init() {
           if (polygon._index >= polygonTypes.length) {
             polygon._index = 0;
           }
-          await polygon.changePolygon('/anglo-sp25-arcane-portal/assets/' + polygonTypes[polygon._index]);
+          const baseURL = new URL('.', import.meta.url).pathname;
+          await polygon.changePolygon(baseURL + 'assets/' + polygonTypes[polygon._index]);
           needToWait = false;
         }
         break;
