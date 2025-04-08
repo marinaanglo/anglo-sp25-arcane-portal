@@ -62,19 +62,18 @@ async function init() {
       case 'w': case 'W': 
         if (!needToWait) {
           needToWait = true;
-          const polygonTypes = ["box.polygon","circle.polygon","star.polygon","human.polygon","dense.polygon"];
+          const polygonTypes = ["box.polygon","dense.polygon","human.polygon","star.polygon","circle.polygon"];
           polygon._index += 1;
           if (polygon._index >= polygonTypes.length) {
             polygon._index = 0;
           }
-          await polygon.changePolygon('/assets/' + polygonTypes[polygon._index]);
+          await polygon.changePolygon('/anglo-sp25-arcane-portal/assets/' + polygonTypes[polygon._index]);
           needToWait = false;
         }
         break;
     }
   });
 
-  // run animation at 60 fps
   var frameCnt = 0;
   var tgtFPS = 60;
   var secPerFrame = 1. / tgtFPS;
