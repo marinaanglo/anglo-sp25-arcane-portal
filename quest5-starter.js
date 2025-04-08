@@ -38,7 +38,6 @@ async function init() {
   // Create a 2d animated renderer
   const renderer = new Renderer(canvasTag);
   await renderer.init();
-  //const polygon = new PolygonObject(renderer._device, renderer._canvasFormat, '/assets/box.polygon');
   const polygon = new PolygonObject(renderer._device, renderer._canvasFormat, '/assets/box.polygon');
   await renderer.appendSceneObject(polygon);
   let fps = '??';
@@ -93,7 +92,7 @@ async function init() {
   setInterval(() => { 
     fpsText.updateText('fps: ' + frameCnt);
     frameCnt = 0;
-  }, 1000); // call every 1000 ms
+  }, 1000); 
   return renderer;
 }
 
