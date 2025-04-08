@@ -1,7 +1,7 @@
 import initGameOfLife from './game-of-life.js';
-import Renderer from '/lib/Viz/2DRenderer.js';
-import Camera from '/lib/Viz/2DCamera.js';
-import StandardTextObject from '/lib/DSViz/StandardTextObject.js';
+import Renderer from './lib/Viz/2DRenderer.js';
+import Camera from './lib/Viz/2DCamera.js';
+import StandardTextObject from './lib/DSViz/StandardTextObject.js';
 
 async function init() {
   const canvasTag = document.createElement('canvas');
