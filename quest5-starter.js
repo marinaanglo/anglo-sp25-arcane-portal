@@ -61,7 +61,7 @@ async function init() {
       case 'w': case 'W': 
         if (!needToWait) {
           needToWait = true;
-          const polygonTypes = ["box.polygon","dense.polygon","human.polygon","star.polygon","circle.polygon"];
+          const polygonTypes = ["box.polygon","human.polygon","star.polygon","circle.polygon"];
           polygon._index += 1;
           if (polygon._index >= polygonTypes.length) {
             polygon._index = 0;
