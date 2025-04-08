@@ -1,7 +1,7 @@
-import Renderer from "/lib/Viz/2DRenderer.js";
-import FireWorkObject from "/lib/DSViz/FireWorkObject.js";
-import ParticleSystemObject from "/lib/DSViz/ParticleSystemObject.js";
-import StandardTextObject from "/lib/DSViz/StandardTextObject.js";
+import Renderer from "./lib/Viz/2DRenderer.js";
+import FireWorkObject from "./lib/DSViz/FireWorkObject.js";
+import ParticleSystemObject from "./lib/DSViz/ParticleSystemObject.js";
+import StandardTextObject from "./lib/DSViz/StandardTextObject.js";
 
 async function init() {
     const canvas = document.createElement("canvas");
